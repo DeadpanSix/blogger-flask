@@ -1,2 +1,13 @@
 *.pyc
 __pycache__
+.bashrc
+.cache
+.gitconfig
+.ipython/
+.local/
+.profile
+.python_history
+.pythonstartup.py
+.ssh
+.vimrc
+.virtualenvs/
