@@ -4,39 +4,34 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 
         <title>Scratchboard page</title>
     </head>
 
     <body>
-        <nav class="nav">
-            <ul class="nav nav-underline">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Active</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">My Scrachpad</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
+        <nav class="navbar navbar-inverse">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">My scratchpad</a>
+            </div>
+          </div>
         </nav>
 
         <div class="container">
-            <div class="row">Dummy first comment.</div>
+            <div class="row">Be my guest, add as many comments you like.</div>
 
-            <div class="row">
-                Second dummy comment. Hopefully more interesting than the first.
-            </div>
-
-            <div class="row">
-                Third dummy comment. Hopefully exciting!.
-            </div>
+            {% for comment in comments %}
+                <div class="row">
+                    {{ comment }}
+                </div>
+            {% endfor %}
 
             <div class="row">
                 <form action="." method="POST">
